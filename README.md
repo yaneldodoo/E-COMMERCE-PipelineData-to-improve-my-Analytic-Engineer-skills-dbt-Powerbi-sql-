@@ -1,16 +1,28 @@
-Welcome to my first dbt E-commerce project!
+# Welcome to my first dbt e-commerce project!
 
-### This project builds an end-to-end analytic pipeline on a e-commerce dataset using DuckDB, Dbt and PowerBI
+### For non-data people, it’s simple.
+I am the person who tells the story behind the data.
+In this project, I work with e-commerce data about orders, payments, products, and customers.
+My job is to analyze this data and extract useful insights from it.
+
+### Some lessons i make :
+- A
+- B
+- C
 
 
-It checks the dataset on kaggle;
-It contains 90k lines and 5 tables : orders - orders items - payments - products and customers
+### For data people, it’s technical.
 
-###  Goals of this project 
+### This project builds an end-to-end analytics pipeline on an e-commerce dataset using DuckDB, dbt, and Power BI
+
+It uses an e-commerce dataset from Kaggle.  
+It contains around 90k rows and 5 tables: orders, order_items, payments, products, and customers.
+
+### Goals of this project 
 - Load raw e-commerce data
 - Clean and transform data with dbt
-- Build analytics-ready data marts with DBT
-- See my transformations on Duck DB
+- Build analytics-ready data marts with dbt
+- View my transformations in DuckDB
 - Visualize key KPIs in Power BI
 
 ## Tech Stack
@@ -19,7 +31,7 @@ It contains 90k lines and 5 tables : orders - orders items - payments - products
 - SQL
 - Power BI
 
-To update my Azure skills, i use Azure  to create a Virtual Machine on which I installed PowerBI for visualition
+To improve my Azure skills, I also used Azure to create a Virtual Machine on which I installed Power BI for visualization.
 
 ## Project Structure
 - `models/staging/` : cleaned staging models
@@ -33,3 +45,6 @@ To update my Azure skills, i use Azure  to create a Virtual Machine on which I i
 dbt debug
 dbt run
 dbt test
+
+My tests dbt :
+
