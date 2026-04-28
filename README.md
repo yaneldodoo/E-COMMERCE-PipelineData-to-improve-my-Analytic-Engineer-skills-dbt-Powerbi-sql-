@@ -46,5 +46,11 @@ dbt debug
 dbt run
 dbt test
 
+<<<<<<< HEAD
 My tests dbt :
 
+=======
+My DuckDB dashboard after ETL:
+
+<img src="assets/myduckdbafterETL.png" alt="DuckDB dashboard" width="700"/>
+>>>>>>> 26d5e59 (e)

@@ -33,7 +33,7 @@ models:
         tests:
           - not_null
 
-          - name: city_etat
+      - name: city_etat
         tests:
           - not_null
 
@@ -43,7 +43,6 @@ models:
         tests:
           - not_null
 
-        
       - name: category
         tests:
           - not_null
@@ -61,7 +60,6 @@ models:
       - name: typepaiement
         tests:
           - not_null
-
     tests:
       - dbt_utils.expression_is_true:
           expression: "payment >= 0"
@@ -76,11 +74,9 @@ models:
         tests:
           - not_null
 
-
       - name: price
         tests:
           - not_null
-
     tests:
       - dbt_utils.expression_is_true:
           expression: "price >= 0"

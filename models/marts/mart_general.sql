@@ -6,7 +6,6 @@ SELECT
     c.city,
     c.etat,
     oi.product_id,
-    oi.seller_id,
     oi.price,
     p.payment,
     p.typepaiement
@@ -17,3 +16,4 @@ JOIN {{ ref('stg_order_items') }} oi
     ON o.order_id = oi.order_id
 JOIN {{ ref('stg_payments') }} p
     ON o.order_id = p.order_id
+    

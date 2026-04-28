@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: mart_daily_revenue
+    columns:
+      - name: jour
+        tests:
+          - not_null
+          - unique
+
+      - name: ca
+        tests:
+          - not_null
+
+  - name: mart_customer_metrics
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+      - name: ca_total
+        tests:
+          - not_null
+
+  - name: mart_customer_rfm
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+      - name: segment
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Champion', 'Fidele', 'Perdu', 'A risque', 'En developpement']
+  
