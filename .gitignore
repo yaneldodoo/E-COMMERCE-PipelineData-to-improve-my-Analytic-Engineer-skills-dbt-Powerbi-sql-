@@ -7,3 +7,4 @@ logs/
 *.csv
 .user.yml
 .DS_Store
+profiles.yml
