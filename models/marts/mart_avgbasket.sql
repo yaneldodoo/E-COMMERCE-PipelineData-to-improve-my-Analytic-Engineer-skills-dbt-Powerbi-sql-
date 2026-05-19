@@ -1,5 +1,5 @@
 SELECT
-    state,
+    city_etat,
     AVG(total_item_amount) AS panier_moyen
 
 FROM {{ ref('stg_orders') }} o
@@ -8,5 +8,5 @@ JOIN {{ ref('stg_order_items') }} oi
 JOIN {{ ref('stg_customers') }} c
     ON c.customer_id = o.customer_id
 
-GROUP BY state
-ORDER BY panier_moyen DESC
+GROUP BY city_etat
+ORDER BY panier_moyen DESC  
