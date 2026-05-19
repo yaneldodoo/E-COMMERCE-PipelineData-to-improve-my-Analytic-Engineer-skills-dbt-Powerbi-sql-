@@ -5,3 +5,5 @@ logs/
 *.duckdb
 *.zip
 *.csv
+.user.yml
+models/.DS_Store
