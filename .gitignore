@@ -6,4 +6,4 @@ logs/
 *.zip
 *.csv
 .user.yml
-models/.DS_Store
+.DS_Store
