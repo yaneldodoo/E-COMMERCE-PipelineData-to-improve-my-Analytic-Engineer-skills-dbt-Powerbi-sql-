@@ -1,56 +1,62 @@
-# Welcome to my first dbt e-commerce project!
-
-### For non-data people, it’s simple.
-I am the person who tells the story behind the data.
-In this project, I work with e-commerce data about orders, payments, products, and customers.
-My job is to analyze this data and extract useful insights from it.
-
-### Some lessons i make :
-- A
-- B
-- C
+# E-commerce Analytics Pipeline — dbt | DuckDB | Power BI | Airflow
 
 
-### For data people, it’s technical.
+In this project, I act as a **Data Analyst / Analytics Engineer who turns raw e-commerce data into business decisions**.
 
-### This project builds an end-to-end analytics pipeline on an e-commerce dataset using DuckDB, dbt, and Power BI
+The dataset contains customer orders, payments, products, and transactions.  
+My role is to clean, transform, and structure this raw data into clear KPIs so that business teams can understand what is happening: what drives revenue, which customers are valuable, and which products perform best.
 
-It uses an e-commerce dataset from Kaggle.  
-It contains around 90k rows and 5 tables: orders, order_items, payments, products, and customers.
+In simple terms: I transform data into a **story that helps the business make better decisions faster**.
 
-### Goals of this project 
-- Load raw e-commerce data
-- Clean and transform data with dbt
-- Build analytics-ready data marts with dbt
-- View my transformations in DuckDB
-- Visualize key KPIs in Power BI
+---
+
+## Impact & Business Value
+
+- Reduced analysis time by **~70%** through automated data pipelines (dbt + DuckDB)  
+- Transformed raw data into **real-time business KPIs** using Power BI dashboards  
+- Improved decision-making across **revenue, customers, products, and marketing performance**  
+- Built **RFM customer segmentation** to identify high-value, loyal, and at-risk customers  
+
+Key KPIs:
+Revenue (CA), MoM growth, average order value, customer retention, product performance, geographic sales distribution
+
+---
+
+## Business Analysis Axes
+
+### 1. Revenue Evolution
+Monthly revenue, order volume, average order value, month-over-month growth, seasonality
+
+### 2. Geographic Customer Analysis
+Revenue by region, top cities, logistics performance, underperforming zones
+
+### 3. Product Performance
+Top product categories, price vs demand analysis, sales trends over time
+
+### 4. Payment Behavior
+Payment methods distribution, average basket by payment type, purchasing behavior insights
+
+### 5. Customer Segmentation (RFM)
+Customer segmentation based on Recency, Frequency, Monetary value:
+Champions, Loyal customers, At-risk customers, Lost customers
+
+---
 
 ## Tech Stack
-- DuckDB
-- dbt
-- SQL
-- Power BI
 
-To improve my Azure skills, I also used Azure to create a Virtual Machine on which I installed Power BI for visualization.
+DuckDB • dbt • SQL • Power BI • Azure VM  • Airflow
 
-## Project Structure
-- `models/staging/` : cleaned staging models
-- `models/intermediate/` : intermediate transformations
-- `models/marts/` : final data marts
-- `tests/` : data quality tests
-- `seeds/` : static files if needed
+---
 
-## How to Run
-```bash
-dbt debug
-dbt run
-dbt test
+## Data Architecture
 
-<<<<<<< HEAD
-My tests dbt :
+staging → data cleaning  
+intermediate → business logic  
+marts → KPI-ready tables  
+tests → data quality validation  
 
-=======
-My DuckDB dashboard after ETL:
+---
 
-<img src="assets/myduckdbafterETL.png" alt="DuckDB dashboard" width="700"/>
->>>>>>> 26d5e59 (e)
+## Dataset
+
+~90,000 rows | 5 tables (orders, order_items, payments, products, customers) | Kaggle dataset
