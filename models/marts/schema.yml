@@ -1,6 +1,7 @@
 version: 2
 
 models:
+
   - name: mart_daily_revenue
     columns:
       - name: jour
@@ -35,4 +36,20 @@ models:
           - not_null
           - accepted_values:
               values: ['Champion', 'Fidele', 'Perdu', 'A risque', 'En developpement']
+
+  - name: mart_ca
+    columns:
+
+      - name: annee_de_commande
+        tests:
+          - not_null
+
+      - name: mois_de_commande
+        tests:
+          - not_null
+
+      - name: nombre_de_commandes
+        tests:
+          - not_null
+
   
