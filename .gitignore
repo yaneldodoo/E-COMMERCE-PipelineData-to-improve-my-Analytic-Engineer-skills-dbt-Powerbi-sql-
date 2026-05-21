@@ -11,3 +11,6 @@ profiles.yml
 dbt_project.yml
 package-lock.yml
 packages.yml
+dbt-env
+seeds/
+snapshots/
