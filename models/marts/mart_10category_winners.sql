@@ -1,8 +1,8 @@
-select category, 
-sum(payment) as ca, 
-FROM {{ ref('stg_order_items') }} oi
-JOIN {{ ref('stg_payments') }} p on oi.order_id=p.order_id
-join stg_products p on oi.product_id=p.product_id
-group by category
-order by ca DESC
-limit 10
+--this model is to know the winners category
+
+SELECT
+    order_id,
+    product_id,
+    category,
+    total_item_amount
+FROM {{ ref('int_sales') }}

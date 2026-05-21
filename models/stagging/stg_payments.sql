@@ -1,11 +1,9 @@
 WITH source AS (
     SELECT * FROM {{ source('raw', 'raw_payments') }}
-),
-renamed AS (
-    SELECT
-        order_id,
-        payment_type AS typepaiement,
-        CAST(COALESCE(payment_value, 0) AS DECIMAL(10,2)) AS payment
-    FROM source
 )
-SELECT * FROM renamed
+
+SELECT
+    order_id::VARCHAR AS order_id,
+    payment_type::VARCHAR AS typepaiement,
+    COALESCE(payment_value, 0)::NUMERIC(10,2) AS payment
+FROM source

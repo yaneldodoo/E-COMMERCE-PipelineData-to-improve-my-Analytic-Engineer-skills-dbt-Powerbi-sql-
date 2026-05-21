@@ -1,11 +1,9 @@
 version: 2
 
 sources:
-  - name: stagging # Source system name
+  - name: intermediate # Source system name
     schema: main # Schema containing the source tables
     tables:
-      - name: stg_customers # Table name as it exists in the database
-      - name: stg_order_items
-      - name: stg_orders
-      - name: stg_payments
-      - name: stg_products
+      - name: int_delivery # Table name as it exists in the database
+      - name: int_sales
+      - name: int_customers_orders

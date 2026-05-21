@@ -1,10 +1,4 @@
-SELECT
-city,
-    AVG(date(delivered_at) - date(ordered_at)) AS delai_livraison
+-- this model is to track the delivery delay of the orders
 
-FROM {{ ref('stg_orders') }} o
-JOIN {{ ref('stg_customers') }} c
-    ON c.customer_id = o.customer_id
-
-GROUP BY city
-ORDER BY delai_livraison DESC
+SELECT *
+FROM {{ ref('int_delivery') }}

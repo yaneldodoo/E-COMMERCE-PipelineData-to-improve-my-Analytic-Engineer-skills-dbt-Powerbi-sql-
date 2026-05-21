@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: intermediate # Source system name
+    schema: main # Schema containing the source tables
+    tables:
+      - name: stg_customers # Table name as it exists in the database
+      - name: stg_order_items # Table name as it exists in the database
+      - name: stg_orders # Table name as it exists in the database
+      - name: stg_payments # Table name as it exists in the database
+      - name: stg_products # Table name as it exists in the database

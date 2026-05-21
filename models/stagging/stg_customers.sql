@@ -1,11 +1,10 @@
-with source as (
-    select * from {{ source('raw', 'raw_customers') }}
-), 
-renamed as (
-    select customer_id, 
-    cast(customer_city as varchar) as  city,
-    cast(customer_state as varchar) as etat,
-    Concat(city, ' - ', etat) as city_etat
-from source
+WITH source AS (
+    SELECT * FROM {{ source('raw', 'raw_customers') }}
 )
-select * from renamed 
+
+SELECT
+    customer_id::VARCHAR AS customer_id,
+    customer_city::VARCHAR AS city,
+    customer_state::VARCHAR AS etat,
+    CONCAT(customer_city, ' - ', customer_state)::VARCHAR AS city_etat
+FROM source

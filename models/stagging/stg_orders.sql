@@ -1,22 +1,16 @@
 WITH source AS (
     SELECT * FROM {{ source('raw', 'raw_orders') }}
-),
-
-renamed AS ( 
-    SELECT
-        order_id,
-        customer_id,
-        COALESCE(order_status, 'unknown') AS order_status,
-
-        CAST(order_purchase_timestamp AS TIMESTAMP) AS ordered_at,
-        CAST(order_approved_at AS TIMESTAMP) AS approved_at,
-        CAST(order_delivered_timestamp AS TIMESTAMP) AS delivered_at,
-
-        EXTRACT(YEAR FROM order_purchase_timestamp) AS annee_de_commande,
-        EXTRACT(MONTH FROM order_purchase_timestamp) AS mois_de_commande
-
-    FROM source 
 )
 
-SELECT * FROM renamed
+SELECT
+    order_id::VARCHAR AS order_id,
+    customer_id::VARCHAR AS customer_id,
+    COALESCE(order_status, 'unknown')::VARCHAR AS order_status,
 
+    order_purchase_timestamp::TIMESTAMP AS ordered_at,
+    order_approved_at::TIMESTAMP AS approved_at,
+    order_delivered_timestamp::TIMESTAMP AS delivered_at,
+
+    EXTRACT(YEAR FROM order_purchase_timestamp)::INT AS annee_de_commande,
+    EXTRACT(MONTH FROM order_purchase_timestamp)::INT AS mois_de_commande
+FROM source

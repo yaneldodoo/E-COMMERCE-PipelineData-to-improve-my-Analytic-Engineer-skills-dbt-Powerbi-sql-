@@ -1,11 +1,9 @@
+--this model is to know the cities which make the biggest sales
+
 SELECT
+    order_id,
     city,
-    COUNT(order_id) AS nombre_commandes
-
-FROM {{ ref('stg_customers') }} c
-JOIN {{ ref('stg_orders') }} o
-    ON c.customer_id = o.customer_id
-
-GROUP BY city
-ORDER BY nombre_commandes DESC
-LIMIT 10
+    etat,
+    city_etat,
+    payment
+FROM {{ ref('int_customers_orders') }}
