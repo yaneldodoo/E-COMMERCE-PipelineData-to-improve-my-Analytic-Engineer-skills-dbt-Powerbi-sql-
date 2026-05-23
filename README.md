@@ -1,4 +1,4 @@
-# E-commerce Analytics Pipeline — dbt | DuckDB | Power BI | Airflow
+# E-commerce Analytics Pipeline — dbt | DuckDB | Power BI | Dataiku
 
 
 In this project, I act as a **Data Analyst / Analytics Engineer who turns raw e-commerce data into business decisions**.
@@ -16,6 +16,7 @@ In simple terms: I transform data into a **story that helps the business make be
 - Transformed raw data into **real-time business KPIs** using Power BI dashboards  
 - Improved decision-making across **revenue, customers, products, and marketing performance**  
 - Built **RFM customer segmentation** to identify high-value, loyal, and at-risk customers  
+- Predict futurs data with dataiku
 
 Key KPIs:
 Revenue (CA), MoM growth, average order value, customer retention, product performance, geographic sales distribution
@@ -44,7 +45,7 @@ Champions, Loyal customers, At-risk customers, Lost customers
 
 ## Tech Stack
 
-DuckDB • dbt • SQL • Power BI • Azure VM  • Airflow
+DuckDB • dbt • SQL • Power BI • Azure VM  • Dataiku
 
 ---
 
