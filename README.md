@@ -10,6 +10,13 @@ In simple terms: I transform data into a **story that helps the business make be
 
 ---
 
+
+## Contexte
+
+This project is build to improve my analytics's engineers skills (dbt, sql, duckdb) and to prepare my certification :
+
+👉 Power BI Analyst Associate : PL300
+
 ## Impact & Business Value
 
 - Reduced analysis time by **~70%** through automated data pipelines (dbt + DuckDB)  
