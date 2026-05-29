@@ -65,7 +65,7 @@ models:
         tests:
           - not_null
 
-  - name: mart_topcategory
+  - name: mart_10_category_winners
     description: Analysis of product categories
 
     columns:
@@ -109,7 +109,24 @@ models:
           - not_null
 
   - name: mart_customer_rfm
-    description: Base of calcul RFM
+    description: Base of calcul RFM (1 to 5 )
+
+    columns:
+
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: payment
+        tests:
+          - not_null
+
+  - name: mart_avgbasket
+    description: Analyst of average basket per state,city
 
     columns:
 
