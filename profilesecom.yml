@@ -1,9 +1,0 @@
-ecommerce_project:
-  target: dev
-  outputs:
-    dev:
-      type: duckdb
-      path: /Users/mac/formation-data/data/ecommerce.duckdb
-      schema: main
-      threads: 4
-
