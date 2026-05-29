@@ -56,7 +56,7 @@ Champions, Loyal customers, At-risk customers, Lost customers
 
 ## Tech Stack
 
-DuckDB • dbt • SQL • Power BI • Azure VM  • Dataiku
+DuckDB • dbt • SQL • Power BI • Dataiku
 
 ---
 
