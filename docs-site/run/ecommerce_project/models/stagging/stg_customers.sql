@@ -1,0 +1,14 @@
+
+  
+  create view "ecommerce"."main"."stg_customers__dbt_tmp" as (
+    WITH source AS (
+    SELECT * FROM "ecommerce"."main"."raw_customers"
+)
+
+SELECT
+    customer_id::VARCHAR AS customer_id,
+    customer_city::VARCHAR AS city,
+    customer_state::VARCHAR AS etat,
+    CONCAT(customer_city, ' - ', customer_state)::VARCHAR AS city_etat
+FROM source
+  );

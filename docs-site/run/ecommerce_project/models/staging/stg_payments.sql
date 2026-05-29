@@ -1,0 +1,15 @@
+
+  
+  create view "ecommerce"."main"."stg_payments__dbt_tmp" as (
+    WITH source AS (
+    SELECT * FROM "ecommerce"."main"."raw_payments"
+),
+renamed AS (
+    SELECT
+        order_id,
+        payment_type AS typepaiement,
+        CAST(COALESCE(payment_value, 0) AS DECIMAL(10,2)) AS payment
+    FROM source
+)
+SELECT * FROM renamed
+  );
