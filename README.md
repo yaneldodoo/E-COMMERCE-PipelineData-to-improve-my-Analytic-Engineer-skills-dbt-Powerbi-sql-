@@ -11,11 +11,15 @@ In simple terms: I transform data into a **story that helps the business make be
 ---
 
 
-## Contexte
+## Fact
 
 This project is build to improve my analytics's engineers skills (dbt, sql, duckdb) and to prepare my certification :
 
 👉 Power BI Analyst Associate : PL300
+
+## My Final Dashboard
+
+https://drive.google.com/file/d/1Oh2an5pX3fHnT0ZdgEEjsxNk4zJNUM1J/view?usp=share_link
 
 ## Impact & Business Value
 
@@ -28,7 +32,7 @@ This project is build to improve my analytics's engineers skills (dbt, sql, duck
 Key KPIs:
 Revenue (CA), MoM growth, average order value, customer retention, product performance, geographic sales distribution
 
----
+
 
 ## Business Analysis Axes
 
