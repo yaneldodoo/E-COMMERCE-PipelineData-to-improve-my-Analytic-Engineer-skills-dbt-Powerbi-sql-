@@ -2,20 +2,14 @@ version: 2
 
 models:
 
-  - name: mart_general
-    description: Main dataset for Power BI analyses
-
+  - name: mart_avgbasket
+    description: "Geographical analysis of payment and basket behavior"
     columns:
-
-      - name: order_id
+      - name: etat
         tests:
           - not_null
 
-      - name: customer_id
-        tests:
-          - not_null
-
-      - name: ordered_at
+      - name: city_etat
         tests:
           - not_null
 
@@ -23,20 +17,31 @@ models:
         tests:
           - not_null
 
-      - name: category
-        tests:
-          - not_null
 
-  - name: mart_ca
-    description: Analysis of revenue over time
-
+  - name: mart_10category_winners
+    description: "Best performing product categories based on revenue"
     columns:
-
       - name: order_id
         tests:
           - not_null
 
-      - name: ordered_at
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: category
+        tests:
+          - not_null
+
+      - name: total_item_amount
+        tests:
+          - not_null
+
+
+  - name: mart_ca
+    description: "Revenue analysis by time (month/year)"
+    columns:
+      - name: order_id
         tests:
           - not_null
 
@@ -48,93 +53,76 @@ models:
         tests:
           - not_null
 
-  - name: mart_topcity
-    description: Geographic analysis of orders
 
+  - name: mart_customer_metrics
+    description: "Customer level KPIs: frequency, monetary, recency base data"
     columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+      - name: payment
+        tests:
+          - not_null
+
+
+  - name: mart_customer_rfm
+    description: "RFM segmentation of customers (Champion, Fidele, Perdu, etc.)"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+      - name: segment
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - Champion
+                - Fidele
+                - Perdu
+                - A risque
+                - En developpement
+
+      - name: recency
+        tests:
+          - not_null
+
+      - name: frequency
+        tests:
+          - not_null
+
+      - name: monetary
+        tests:
+          - not_null
+
+
+  - name: mart_delivery_delay
+    description: "Tracking of delivery performance and delays"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+
+  - name: mart_general
+    description: "General dashboard mart combining multiple KPIs"
+
+
+  - name: mart_topcity
+    description: "Top cities by sales performance"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
 
       - name: city
         tests:
           - not_null
 
       - name: etat
-        tests:
-          - not_null
-
-      - name: payment
-        tests:
-          - not_null
-
-  - name: mart_10_category_winners
-    description: Analysis of product categories
-
-    columns:
-
-      - name: category
-        tests:
-          - not_null
-
-      - name: total_item_amount
-        tests:
-          - not_null
-
-  - name: mart_delivery_delay
-    description: delivery delay of the orders
-
-    columns:
-
-      - name: order_id
-        tests:
-          - not_null
-
-      - name: delai_livraison
-        tests:
-          - not_null
-
-  - name: mart_customer_metrics
-    description: Dataset CRM clients
-
-    columns:
-
-      - name: customer_id
-        tests:
-          - not_null
-
-      - name: order_id
-        tests:
-          - not_null
-
-      - name: payment
-        tests:
-          - not_null
-
-  - name: mart_customer_rfm
-    description: Base of calcul RFM (1 to 5 )
-
-    columns:
-
-      - name: customer_id
-        tests:
-          - not_null
-
-      - name: order_id
-        tests:
-          - not_null
-
-      - name: payment
-        tests:
-          - not_null
-
-  - name: mart_avgbasket
-    description: Analyst of average basket per state,city
-
-    columns:
-
-      - name: customer_id
-        tests:
-          - not_null
-
-      - name: order_id
         tests:
           - not_null
 
